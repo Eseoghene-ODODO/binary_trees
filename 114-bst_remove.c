@@ -37,6 +37,7 @@ int two_children(bst_t *root)
 	root->n = new_value;
 	return (new_value);
 }
+int remove_type(bst_t *root);
 /**
  *remove_type - function that removes a node depending of its children
  *@root: node to remove
