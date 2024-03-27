@@ -51,8 +51,6 @@ int btih_helper(const binary_tree_t *tree)
 	return (btih_helper(tree->left) &&
 		btih_helper(tree->right));
 }
-
-int binary_tree_is_complete(const binary_tree_t *tree);
 /**
  * binary_tree_is_complete - checks if a binary tree is complete
  * @tree: a pointer to the root node of the tree to check
@@ -72,7 +70,6 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	size = binary_tree_size(tree);
 	return (btic_helper(tree, 0, size));
 }
-int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
 /**
  * btic_helper - checks if a binary tree is complete
  * @tree: a pointer to the root node of the tree to check
