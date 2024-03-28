@@ -1,6 +1,8 @@
 #include "binary_trees.h"
-#include <stdlib.h>
 
+int btih_helper(const binary_tree_t *tree);
+int binary_tree_is_heap(const binary_tree_t *tree);
+size_t binary_tree_size(const binary_tree_t *tree);
 /**
  * binary_tree_is_heap - checks if a binary tree is a valid Max Binary Heap
  * @tree: a pointer to the root node of the tree to check
@@ -18,7 +20,6 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 	return (btih_helper(tree));
 }
 
-int btih_helper(const binary_tree_t *tree);
 /**
  * btih_helper - checks if a binary tree is a valid Max Binary Heap
  * @tree: a pointer to the root node of the tree to check
@@ -33,16 +34,13 @@ int btih_helper(const binary_tree_t *tree)
 	{
 		return (1);
 	}
-	if (!binary_tree_is_complete(tree))
-	{
-		return (0);
-	}
 	if (tree->left)
 	{
 		if (tree->left->n > tree->n)
 		{
 			return (0);
 		}
+	}
 	if (tree->right)
 	{
 		if (tree->right->n > tree->n)
